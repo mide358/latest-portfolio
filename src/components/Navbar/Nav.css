@@ -1,0 +1,17 @@
+.navbar {
+  /* background-color: #e5eeec !important; */
+  background: #119c8c !important;
+}
+.navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: #14342c;
+}
+.nav-left {
+  padding-right: 3rem !important;
+}
+.nav-left a {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 1rem;
+}

@@ -1,38 +1,598 @@
-.App {
+/* <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 200 to 700 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #ebfbf3;
+  /* margin-bottom: 75px; */
+  height: 100vh;
+  /* min-height: calc(100vh - 75px); */
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.home-left {
+  width: 200px;
+
+  z-index: 3;
+}
+.home-right {
+  z-index: 3;
+}
+.home-right img {
+  height: 150px;
+  width: 100px;
+  border-radius: 4px;
+  display: none;
+}
+#first-text,
+#second-text {
+  font-size: 14px;
+  color: #9c5638;
+  font-weight: bold;
+}
+#welcome {
+  font-size: 18px;
+}
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.border-wrap {
+  position: relative;
+  background: repeating-conic-gradient(
+    from var(--aa),
+    #119c8c 0%,
+    #119c8c 5%,
+    transparent 5%,
+    transparent 40%,
+    #119c8c 50%
+  );
+  animation: animate 6s linear infinite;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+.border-wrap::before {
+  position: absolute;
+  content: '';
+  /* width: 50%; */
+  /* padding: 2rem; */
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(
+    from var(--aa),
+    #14342c 0%,
+    #14342c 5%,
+    transparent 5%,
+    transparent 40%,
+    #14342c 50%
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+  border-radius: 20px;
+}
+.border-wrap::after {
+  /* z-index: -1; */
+  content: '';
+  position: absolute;
+  inset: 8px;
+  background: #ebfbf3;
+  border-radius: 15px;
+  border: 8px solid #25252b;
+  filter: blur(1px);
+}
+
+.home-wrap {
+  display: flex;
+  padding: 2rem;
+  z-index: 5;
+}
+@property --aa {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes animate {
+  0% {
+    --aa: 0deg;
+  }
+  100% {
+    --aa: 360deg;
+  }
+}
+/******about******/
+.about-container {
+  /* height: 100vh; */
+
+  /* margin: auto;
+  width: 50%; */
+
+  min-height: calc(100vh - 75px);
+}
+.caption-wrap {
+  /* background-color: #119c8c; */
+  background-color: #2b2d2c;
+}
+.carousel-caption {
+  background-color: #2b2d2c;
+  height: 100px;
+  top: 4rem;
+}
+.carousel-caption h1 {
+  background-color: #14342c;
+}
+
+.about-carousel p {
+  color: #14342c;
+}
+.carousel-item {
+  background-color: #14342c;
+}
+
+.carousel-item img {
+  height: 300px;
+  opacity: 0.8;
+}
+
+.section-two {
+  margin: auto;
+  letter-spacing: 2px;
+  width: 60%;
+
+  padding: 2rem 0rem;
+  font-size: 16px;
+}
+/******about end******/
+/******Portfolio******/
+/* .card-col {
+  margin: auto;
+} */
+.card {
+  background-color: #119c8c;
+  background-color: #14342c;
+  padding: 1.2rem;
+  width: 14rem;
+}
+.card img {
+  height: 12rem;
+  border-radius: 4px;
+}
+
+.card-body {
+  color: #ebfbf3;
+  text-shadow: 1px 1px #14342c;
+}
+.card-text {
+  min-height: 4rem;
+}
+.portfolio-container {
+  min-height: calc(100vh - 75px);
+}
+
+.portfolio-title {
+  padding-top: 2rem;
+  /* padding-bottom: 0.5rem; */
+  text-align: center;
+  font-size: 20px;
+}
+.portfolio-title a {
+  color: #9c5638;
+  text-decoration: underline;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.portfolio-link {
+  font-size: 18px;
+  background-color: #ebfbf3;
+  color: #25252b;
+  outline: solid 5px #119c8c;
+  transition: outline 0.6s linear;
+  font-weight: bold;
+  outline-style: ridge;
+  border-radius: 4px;
+  padding: 8px 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.portfolio-link:hover {
+  outline-width: 10px;
+}
+/* portfolio heading underline */
+hr.hr-line {
+  height: 15px;
+  border-style: solid;
+  border-color: #25252b;
+  border-width: 0 0 2px 0;
+  border-radius: 20px;
+}
+hr.hr-line:before {
+  display: block;
+  content: '';
+  height: 15px;
+  margin-top: -30px;
+  border-style: solid;
+  border-color: #25252b;
+  border-width: 2px 0 0 0;
+  border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/*******Contact******/
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 75px);
+  margin: auto;
+  padding-bottom: 2rem;
+}
+.card {
+  width: 18rem;
+}
+#card-circle {
+  background: none;
+  border: none;
+  outline: none;
+  padding-top: 1rem !important;
+}
+.card-circle {
+  position: relative;
+  text-align: center;
+  padding-top: 1rem;
+
+  background-color: #14342c;
+  border: 10px solid transparent;
+  color: #ebfbf3;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  font-size: 12px;
+  margin: auto;
+}
+.card-circle a {
+  /* z-index: 5;
+  color: #fff;
+  background: #9c5638;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 12px; */
+  display: none;
+}
+
+.contact-title span {
+  color: #14342c;
+  color: #9c5638;
+}
+.card-circle h4,
+.card-circle p {
+  /* padding-top: 1rem; */
+  color: #ebfbf3;
+  font-size: 14px !important;
+  padding-top: 0rem;
+}
+
+.card-text p {
+  font-size: 10px !important;
+}
+.card-circle:before {
+  position: absolute;
+  content: '';
+  height: calc(100% + 40px);
+  width: calc(100% + 40px);
+  border: 8px dashed #9c5638;
+  top: -20px;
+  left: -20px;
+  border-radius: inherit;
+  animation: spin 25s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.contact-container > .col {
+  padding: 0;
+  width: 400px;
+}
+.contact-title {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 150px;
+  /* width: 200px; */
+  text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
+.contact-title h2 {
+  font-size: 2rem;
+  font-weight: bolder;
 }
+.contact-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-card-body P {
+  /* font-size: 14px; */
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /*******home*******/
+  .home-left {
+    width: 250px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    z-index: 3;
   }
-  to {
-    transform: rotate(360deg);
+  .home-right {
+    z-index: 3;
+  }
+  .home-right img {
+    height: 200px;
+    width: 250px;
+    border-radius: 4px;
+    display: block;
+  }
+  #first-text,
+  #second-text {
+    font-size: 16px;
+    color: #9c5638;
+    font-weight: bold;
+  }
+  #welcome {
+    font-size: 20px;
+  }
+
+  .home-wrap {
+    padding: 2rem;
+  }
+
+  /********* about ******/
+  .about-container {
+    min-height: calc(100vh - 75px);
+  }
+  .caption-wrap {
+    /* background-color: #119c8c; */
+    background-color: #2b2d2c;
+  }
+  .carousel-caption {
+    background-color: #2b2d2c;
+    opacity: 0.8;
+    /* top: 6rem; */
+    z-index: 5;
+    top: 4rem;
+  }
+  .carousel-caption h1 {
+    background-color: #14342c;
+  }
+
+  .about-carousel p {
+    color: #14342c;
+  }
+  .carousel-item {
+    background-color: #14342c;
+  }
+  .carousel-item img {
+    height: 300px;
+    opacity: 0.9;
+  }
+
+  .section-two {
+    margin: auto;
+    letter-spacing: 2px;
+    width: 60%;
+
+    padding: 2rem 0rem;
+    font-size: 16px;
+  }
+  /* contact */
+  .card-circle {
+    width: 300px;
+    height: 300px;
+  }
+  .card-circle h4,
+  .card-circle p {
+    /* padding-top: 1rem; */
+    color: #ebfbf3;
+    font-size: 14px !important;
+    padding-top: 0.2rem;
+  }
+
+  .card-text p {
+    font-size: 10px !important;
+  }
+  .card-circle a {
+    z-index: 5;
+    color: #fff;
+    background: #9c5638;
+    padding: 5px 2px !important;
+    margin: auto;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    display: block;
+    width: 6rem;
+  }
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
+  .home-left {
+    width: 400px;
+
+    z-index: 3;
+  }
+  .home-right {
+    z-index: 3;
+  }
+  .home-right img {
+    height: 250px;
+    width: 300px;
+    border-radius: 4px;
+    display: block;
+  }
+  #first-text,
+  #second-text {
+    font-size: 20px;
+    color: #9c5638;
+    font-weight: bold;
+  }
+  #welcome {
+    font-size: 22px;
+  }
+  .home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .home-wrap {
+    display: flex;
+    padding: 5rem;
+    z-index: 5;
+  }
+  .card-circle {
+    width: 340px;
+    height: 340px;
+  }
+  /********* about ******/
+  .about-container {
+    margin: 0 auto;
+    width: 50%;
+    min-height: calc(100vh - 75px);
+  }
+  .caption-wrap {
+    /* background-color: #119c8c; */
+    background-color: #2b2d2c;
+  }
+  .carousel-caption {
+    background-color: #2b2d2c;
+    height: 100px;
+    top: 4rem;
+  }
+  .carousel-caption h1 {
+    background-color: #14342c;
+  }
+
+  .about-carousel p {
+    color: #14342c;
+  }
+  .carousel-item {
+    background-color: #14342c;
+  }
+  .carousel-item img {
+    height: 300px;
+    opacity: 0.9;
+    object-fit: cover;
+  }
+
+  .section-two {
+    margin: auto;
+    letter-spacing: 2px;
+    width: 50%;
+
+    padding: 2rem 0rem;
+    font-size: 16px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .home-left {
+    width: 350px;
+
+    z-index: 3;
+  }
+  .home-right {
+    z-index: 3;
+  }
+  .home-right img {
+    height: 400px;
+    width: 350px;
+
+    display: block;
+  }
+  #first-text,
+  #second-text {
+    font-size: 22px;
+    color: #9c5638;
+    font-weight: bold;
+  }
+  #welcome {
+    font-size: 24px;
+  }
+
+  .home-wrap {
+    padding: 4rem;
+  }
+  /* portfolio */
+  .card {
+    /* width: 23rem; */
+    /* width: 18rem; */
+    border-radius: 8px;
+  }
+  .card img {
+    /* width: 20rem; */
+    height: 12rem;
+  }
+  .card-text {
+    min-height: 4rem;
+  }
+  .contact-title {
+    height: 500px;
+  }
+  .contact-title h2 {
+    font-size: 3.5rem;
+  }
+  .card-circle {
+    width: 540px;
+    height: 540px;
+  }
+  .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 75px);
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+  /********* about ******/
+  .about-container {
+    min-height: calc(100vh - 75px);
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .carousel-caption {
+    top: 4rem;
+    height: 100px;
+  }
+
+  .carousel-item img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .section-two {
+    margin: auto;
+    letter-spacing: 2px;
+    width: 50%;
+
+    padding: 2rem 0rem;
+    font-size: 16px;
   }
 }

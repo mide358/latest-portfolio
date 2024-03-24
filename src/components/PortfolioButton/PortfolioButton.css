@@ -1,0 +1,20 @@
+.btn-port {
+  width: 90%;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  margin: auto;
+  color: #0f0e17;
+}
+.btn-port button {
+  font-weight: lighter;
+  padding: 5px 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  color: #e5eeec;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #14342c;
+  border: none;
+  border-radius: 8px;
+}
