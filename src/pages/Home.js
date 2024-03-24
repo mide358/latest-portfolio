@@ -1,12 +1,10 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+
 import image1 from '../assets/images/image1.jpg';
 
 const Home = () => {
   return (
     <div className="home-container">
-      {/* <h1>hello there</h1> */}
-      {/* <div className="box"></div> */}
       <div className="border-wrap">
         <div className="home-wrap">
           <div className="home-left">

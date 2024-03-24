@@ -5,7 +5,6 @@ import {
   faTwitter,
   faLinkedin,
   faGithub,
-  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 
