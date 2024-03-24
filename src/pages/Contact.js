@@ -19,7 +19,7 @@ const Contact = () => {
           <div className="card-body contact-card-body card-circle">
             <h4 className="card-title">Email:</h4>
             <p className="">
-              iyimide.adegunloye@gmail.com / geekymide@gmail.com
+              iyimide.adegunloye@gmail.com / <br /> geekymide@gmail.com
             </p>
             <h4 className="card-title">Phone:</h4>
             <p className="card-text">+447377201986</p>

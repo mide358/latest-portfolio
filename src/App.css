@@ -127,10 +127,10 @@ a {
 }
 .caption-wrap {
   /* background-color: #119c8c; */
-  background-color: #2b2d2c;
+  /* background-color: #2b2d2c; */
 }
 .carousel-caption {
-  background-color: #2b2d2c;
+  /* background-color: #2b2d2c; */
   height: 100px;
   top: 4rem;
 }
@@ -367,12 +367,8 @@ hr.hr-line:before {
   .about-container {
     min-height: calc(100vh - 75px);
   }
-  .caption-wrap {
-    /* background-color: #119c8c; */
-    background-color: #2b2d2c;
-  }
+
   .carousel-caption {
-    background-color: #2b2d2c;
     opacity: 0.8;
     /* top: 6rem; */
     z-index: 5;
@@ -477,12 +473,8 @@ hr.hr-line:before {
     width: 50%;
     min-height: calc(100vh - 75px);
   }
-  .caption-wrap {
-    /* background-color: #119c8c; */
-    background-color: #2b2d2c;
-  }
+
   .carousel-caption {
-    background-color: #2b2d2c;
     height: 100px;
     top: 4rem;
   }
@@ -552,6 +544,29 @@ hr.hr-line:before {
   .card-text {
     min-height: 4rem;
   }
+  .card-circle p {
+    font-size: 20px;
+  }
+  .card-circle a {
+    color: #fff;
+    background: #9c5638;
+    padding: 5px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+  }
+  .card-circle h4,
+  .card-circle p {
+    /* padding-top: 1rem; */
+    color: #ebfbf3;
+    font-size: 22px !important;
+    padding-top: 0rem;
+  }
+
+  .card-text p {
+    /* font-size: 14px !important; */
+  }
   .contact-title {
     height: 500px;
   }
@@ -559,8 +574,8 @@ hr.hr-line:before {
     font-size: 3.5rem;
   }
   .card-circle {
-    width: 540px;
-    height: 540px;
+    width: 450px;
+    height: 450px;
   }
   .contact-container {
     display: flex;
